@@ -9,7 +9,7 @@
 
 #define DEFAULT_LAYER 0
 #define DEFAULT_LAYER_2 
-#define COMBO_TIMEOUT 50
+#define COMBO_TIMEOUT 30
 
 / {
     combos {
@@ -61,11 +61,18 @@
             layers = <DEFAULT_LAYER>;
             bindings = <&kp G>;
         };
-
         /*combo chars middle row right*/
-        combo_Z {
+        combo_H {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <9 10>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp H>;
+        };
+
+        /*combo chars bottom row left*/
+        combo_Z {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <12 14>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp Z>;
         };
