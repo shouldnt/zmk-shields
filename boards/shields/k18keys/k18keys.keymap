@@ -33,6 +33,12 @@
             layers = <DEFAULT_LAYER>;
             bindings = <&kp Q>;
         };
+        combo_T {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <1 2>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp T>;
+        };
 
         /*combo chars top row right*/
         combo_P {
@@ -40,6 +46,12 @@
             key-positions = <5 17>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp P>;
+        };
+        combo_Y {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <3 4>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp Y>;
         };
 
         /*combo chars middle row left*/
