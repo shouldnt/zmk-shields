@@ -111,7 +111,7 @@
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <17 15>;
             layers = <DEFAULT_LAYER>;
-            bindings = <&kp KB_SLASH>;
+            bindings = <&kp SLASH>;
         };
     };
 
