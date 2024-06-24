@@ -18,18 +18,18 @@
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <3 4 5>;
             layers = <DEFAULT_LAYER>;
-            bindings = <&kp Q>;
+            bindings = <&kp ENTER>;
         };
         combo_BS {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <4 5>;
             layers = <DEFAULT_LAYER>;
-            bindings = <&kp Q>;
+            bindings = <&kp BACKSPACE>;
         };
         /*combo chars top row left*/
         combo_Q {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <0 13>;
+            key-positions = <0 12>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp Q>;
         };
@@ -39,7 +39,7 @@
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <5 17>;
             layers = <DEFAULT_LAYER>;
-            bindings = <&kp Q>;
+            bindings = <&kp P>;
         };
 
         /*combo chars middle row left*/
