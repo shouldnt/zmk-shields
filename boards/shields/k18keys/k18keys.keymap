@@ -7,14 +7,140 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEFAULT_LAYER 0
+#define DEFAULT_LAYER_2 
+#define COMBO_TIMEOUT 30
+
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_ENTER {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <3 4 5>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp ENTER>;
+        };
+        combo_BS {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <4 5>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp BACKSPACE>;
+        };
+        /*combo chars top row left*/
+        combo_Q {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <0 12>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp Q>;
+        };
+        combo_T {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <1 2>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp T>;
+        };
+
+        /*combo chars top row right*/
+        combo_P {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <5 17>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp P>;
+        };
+        combo_Y {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <3 4>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp Y>;
+        };
+
+        /*combo chars middle row left*/
+        combo_G {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <7 8>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp G>;
+        };
+        /*combo chars middle row right*/
+        combo_H {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <10 9>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp H>;
+        };
+
+        /*combo chars bottom row left*/
+        combo_Z {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <12 14>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp Z>;
+        };
+        combo_X {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <6 14>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp X>;
+        };
+        combo_C {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <7 14>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp C>;
+        };
+        combo_V {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <8 14>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp V>;
+        };
+        combo_B {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <7 8 14>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp B>;
+        };
+
+        /*combo chars bottom row right*/
+        combo_N {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <10 9 15>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp N>;
+        };
+        combo_M {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <9 15>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp M>;
+        };
+        combo_COMMA {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <10 15>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp COMMA>;
+        };
+        combo_DOT {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <11 15>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp PERIOD>;
+        };
+        combo_SLASH {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <17 15>;
+            layers = <DEFAULT_LAYER>;
+            bindings = <&kp SLASH>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                       &kp N1     &kp N2     &kp N3                                                     &kp A      &kp B      &kp C           
-                       &kp N4     &kp N5     &kp N6                                                     &kp D      &kp D      &kp E           
-            &kp N7                                      &kp N8     &kp N9         &kp F      &kp G                                       &kp H
+                       &kp W      &kp E      &kp R                                                      &kp U      &kp I      &kp O           
+                       &kp S      &kp D      &kp F                                                      &kp J      &kp K      &kp L           
+            &kp A                                       &kp TAB   &kp ESC         &kp SPACE      &kp G                                       &kp SINGLE_QUOTE 
             >;
         };
     };
