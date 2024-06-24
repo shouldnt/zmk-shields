@@ -64,7 +64,7 @@
         /*combo chars middle row right*/
         combo_H {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <9 10>;
+            key-positions = <10 9>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp H>;
         };
