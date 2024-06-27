@@ -31,16 +31,10 @@
             layers = <DEFAULT_LAYER>;
             bindings = <&kp ENTER>;
         };
-        combo_BS {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <4 5>;
-            layers = <DEFAULT_LAYER>;
-            bindings = <&kp BACKSPACE>;
-        };
         /*combo chars top row left*/
         combo_Q {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <0 12>;
+            key-positions = <0 1>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp Q>;
         };
@@ -54,7 +48,7 @@
         /*combo chars top row right*/
         combo_P {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <5 17>;
+            key-positions = <4 5>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp P>;
         };
@@ -151,7 +145,7 @@
             bindings = <
                             &kp W           &kp E            &kp R                                                           &kp U           &kp I            &kp O           
                             &ht LALT S      &ht LCTRL D      &ht LGUI F                                                      &ht RGUI J      &ht RCTRL K      &ht RALT L           
-            &ht LSHFT A                                               &kp TAB   &kp ESC         &kp SPACE      &kp G                                                        &ht RSHFT SINGLE_QUOTE 
+            &ht LSHFT A                                               &kp TAB   &kp ESC         &kp SPACE      &kp BACKSPACE                                                &ht RSHFT SINGLE_QUOTE 
             >;
         };
     };
