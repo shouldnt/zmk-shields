@@ -35,12 +35,6 @@
     };
     combos {
         compatible = "zmk,combos";
-        combo_ENTER {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <3 4 5>;
-            layers = <DEFAULT_LAYER>;
-            bindings = <&kp ENTER>;
-        };
         /*combo chars top row left*/
         combo_Q {
             timeout-ms = <COMBO_TIMEOUT>;
@@ -232,7 +226,7 @@
             bindings = <
                         &kp W        &kp E         &kp R                                                                 &kp U        &kp I         &kp O           
                         &ht LALT S   &ht LCTRL D   &ht LGUI F                                                            &ht RGUI J   &ht RCTRL K   &ht RALT L           
-            &ht LSHFT A                                       &lt L_LAYER TAB   &kp ESC      &kp SPACE   &lt R_LAYER BSPC                                     &ht RSHFT SINGLE_QUOTE 
+            &ht LSHFT A                                       &lt L_LAYER TAB   &kp ENTER    &kp SPACE   &lt R_LAYER BSPC                                     &ht RSHFT SINGLE_QUOTE 
             >;
         };
 
@@ -240,7 +234,7 @@
             bindings = <
                         &kp N1       &kp N2        &kp N3                                                                &trans       &trans        &kp COLON       
                         &kp N4       &kp N5        &kp N6                                                                &kp DARW     &kp UARW      &kp RARW             
-            &caps_word                                        &trans            &trans       &trans      &trans                                               &kp SEMI               
+            &caps_word                                        &trans            &kp ESC      &trans      &trans                                               &kp SEMI               
             >;
         };
         left_layer {
