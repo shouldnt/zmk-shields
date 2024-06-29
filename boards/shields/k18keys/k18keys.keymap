@@ -8,7 +8,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT_LAYER 0
-#define DEFAULT_LAYER_2 
+#define R_LAYER 1
+#define L_LAYER 2
+#define T_LAYER 3
 #define COMBO_TIMEOUT 30
 
 / {
@@ -21,6 +23,14 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <L_LAYER R_LAYER>;
+            then-layer = <T_LAYER>;
         };
     };
     combos {
@@ -137,15 +147,114 @@
             layers = <DEFAULT_LAYER>;
             bindings = <&kp SLASH>;
         };
+
+        // combo r layer
+        combo_N9 {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <6 7 8>;
+            layers = <R_LAYER>;
+            bindings = <&kp N9>;
+        };
+        combo_N7 {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <6 7>;
+            layers = <R_LAYER>;
+            bindings = <&kp N7>;
+        };
+        combo_N8 {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <8 7>;
+            layers = <R_LAYER>;
+            bindings = <&kp N8>;
+        };
+        combo_N0 {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <0 1 2>;
+            layers = <R_LAYER>;
+            bindings = <&kp N0>;
+        };
+        combo_LEFT_ARROW {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <9 10>;
+            layers = <R_LAYER>;
+            bindings = <&kp LARW>;
+        };
+
+        // right layer combo
+        combo_ASTERISK {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <9 10>;
+            layers = <L_LAYER>;
+            bindings = <&kp ASTRK>;
+        };
+        combo_PIPE {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <11 15>;
+            layers = <L_LAYER>;
+            bindings = <&kp PIPE>;
+        };
+        combo_PLUS {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <10 15>;
+            layers = <L_LAYER>;
+            bindings = <&kp PLUS>;
+        };
+        combo_UNDER {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <9 15>;
+            layers = <L_LAYER>;
+            bindings = <&kp UNDER>;
+        };
+        combo_AND {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <9 10 15>;
+            layers = <L_LAYER>;
+            bindings = <&kp AMPS>;
+        };
+        combo_CLOSE_SQUARE_BRACKET {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <0 1>;
+            layers = <L_LAYER>;
+            bindings = <&kp RBKT>;
+        };
+        combo_CLOSE_CURLY_BRACKET {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <1 2>;
+            layers = <L_LAYER>;
+            bindings = <&kp RBRC>;
+        };
+
     };
 
     keymap {
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                            &kp W           &kp E            &kp R                                                           &kp U           &kp I            &kp O           
-                            &ht LALT S      &ht LCTRL D      &ht LGUI F                                                      &ht RGUI J      &ht RCTRL K      &ht RALT L           
-            &ht LSHFT A                                               &kp TAB   &kp ESC         &kp SPACE      &kp BACKSPACE                                                &ht RSHFT SINGLE_QUOTE 
+                        &kp W        &kp E         &kp R                                                                 &kp U        &kp I         &kp O           
+                        &ht LALT S   &ht LCTRL D   &ht LGUI F                                                            &ht RGUI J   &ht RCTRL K   &ht RALT L           
+            &ht LSHFT A                                       &lt L_LAYER TAB   &kp ESC      &kp SPACE   &lt R_LAYER BSPC                                     &ht RSHFT SINGLE_QUOTE 
+            >;
+        };
+
+        right_layer {
+            bindings = <
+                        &kp N1       &kp N2        &kp N3                                                                &trans       &trans        &kp COLON       
+                        &kp N4       &kp N5        &kp N6                                                                &kp DARW     &kp UARW      &kp RARW             
+            &caps_word                                        &trans            &trans       &trans      &trans                                               &kp SEMI               
+            >;
+        };
+        left_layer {
+            bindings = <
+                        &kp LBKT      &kp LBRC      &kp PRCNT                                                             &kp CARET    &trans        &kp TILDE       
+                        &kp AT        &kp HASH      &kp DLLR                                                              &kp MINUS    &kp EQUAL     &kp BSLH             
+            &kp EXCL                                          &trans            &trans       &trans      &trans                                               &kp GRAVE              
+            >;
+        };
+        tri_layer {
+            bindings = <
+                        &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2                                                          &trans       &trans        &trans          
+                        &trans       &trans        &trans                                                                &trans       &trans        &trans               
+            &bt BT_CLR                                        &trans            &trans       &trans      &trans                                               &trans                 
             >;
         };
     };
