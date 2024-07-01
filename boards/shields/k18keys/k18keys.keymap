@@ -234,7 +234,7 @@
             bindings = <
                         &kp N1       &kp N2        &kp N3                                                                &trans       &trans        &kp COLON       
                         &kp N4       &kp N5        &kp N6                                                                &kp DARW     &kp UARW      &kp RARW             
-            &caps_word                                        &trans            &kp ESC      &trans      &trans                                               &kp SEMI               
+            &caps_word                                        &trans            &kp ESC      &kp F12     &trans                                               &kp SEMI               
             >;
         };
         left_layer {
