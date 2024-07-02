@@ -217,6 +217,12 @@
             layers = <L_LAYER>;
             bindings = <&kp RBRC>;
         };
+        combo_CARET {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <3 4>;
+            layers = <L_LAYER>;
+            bindings = <&kp CARET>;
+        };
 
     };
 
@@ -239,7 +245,7 @@
         };
         left_layer {
             bindings = <
-                        &kp LBKT      &kp LBRC      &kp PRCNT                                                             &kp CARET    &trans        &kp TILDE       
+                        &kp LBKT      &kp LBRC      &kp PRCNT                                                             &kp LPAR     &kp RPAR      &kp TILDE       
                         &kp AT        &kp HASH      &kp DLLR                                                              &kp MINUS    &kp EQUAL     &kp BSLH             
             &kp EXCL                                          &trans            &trans       &trans      &trans                                               &kp GRAVE              
             >;
