@@ -236,7 +236,7 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                        &kp W        &kp E         &kp R                                                                 &kp U        &kp I         &kp O           
+                        &ht LALT W   &ht LCTRL E   &kp R                                                                 &kp U        &ht RCTRL I   &ht RALT O      
                         &ht LALT S   &ht LCTRL D   &ht LGUI F                                                            &ht RGUI J   &ht RCTRL K   &ht RALT L           
             &ht LSHFT A                                       &lt L_LAYER TAB   &kp ENTER    &kp SPACE   &lt R_LAYER BSPC                                     &ht RSHFT SINGLE_QUOTE 
             >;
