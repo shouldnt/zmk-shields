@@ -11,7 +11,13 @@
 #define R_LAYER 1
 #define L_LAYER 2
 #define T_LAYER 3
-#define COMBO_TIMEOUT 30
+
+#define COMBO_TIMEOUT 50
+
+#define THUMB_L_CLOSE 13
+#define THUMB_L_FAR 14 
+#define THUMB_R_CLOSE 16
+#define THUMB_R_FAR 15
 
 / {
     behaviors {
@@ -81,31 +87,31 @@
         /*combo chars bottom row left*/
         combo_Z {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <12 14>;
+            key-positions = <12 THUMB_L_CLOSE>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp Z>;
         };
         combo_X {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <6 14>;
+            key-positions = <6 THUMB_L_CLOSE>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp X>;
         };
         combo_C {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <7 14>;
+            key-positions = <7 THUMB_L_CLOSE>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp C>;
         };
         combo_V {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <8 14>;
+            key-positions = <8 THUMB_L_CLOSE>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp V>;
         };
         combo_B {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <7 8 14>;
+            key-positions = <7 8 THUMB_L_CLOSE>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp B>;
         };
@@ -113,31 +119,31 @@
         /*combo chars bottom row right*/
         combo_N {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <10 9 15>;
+            key-positions = <10 9 THUMB_R_CLOSE>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp N>;
         };
         combo_M {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <9 15>;
+            key-positions = <9 THUMB_R_CLOSE>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp M>;
         };
         combo_COMMA {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <10 15>;
+            key-positions = <10 THUMB_R_CLOSE>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp COMMA>;
         };
         combo_DOT {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <11 15>;
+            key-positions = <11 THUMB_R_CLOSE>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp PERIOD>;
         };
         combo_SLASH {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <17 15>;
+            key-positions = <17 THUMB_R_CLOSE>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp SLASH>;
         };
@@ -183,25 +189,25 @@
         };
         combo_PIPE {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <11 15>;
+            key-positions = <11 THUMB_R_CLOSE>;
             layers = <L_LAYER>;
             bindings = <&kp PIPE>;
         };
         combo_PLUS {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <10 15>;
+            key-positions = <10 THUMB_R_CLOSE>;
             layers = <L_LAYER>;
             bindings = <&kp PLUS>;
         };
         combo_UNDER {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <9 15>;
+            key-positions = <9 THUMB_R_CLOSE>;
             layers = <L_LAYER>;
             bindings = <&kp UNDER>;
         };
         combo_AND {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <9 10 15>;
+            key-positions = <9 10 THUMB_R_CLOSE>;
             layers = <L_LAYER>;
             bindings = <&kp AMPS>;
         };
