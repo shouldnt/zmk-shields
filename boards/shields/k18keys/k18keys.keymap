@@ -111,7 +111,7 @@
         };
         combo_B {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <7 8 THUMB_L_CLOSE>;
+            key-positions = <6 7>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp B>;
         };
@@ -119,7 +119,7 @@
         /*combo chars bottom row right*/
         combo_N {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <10 9 THUMB_R_CLOSE>;
+            key-positions = <10 11>;
             layers = <DEFAULT_LAYER>;
             bindings = <&kp N>;
         };
