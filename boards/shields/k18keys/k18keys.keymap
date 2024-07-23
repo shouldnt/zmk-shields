@@ -151,7 +151,7 @@
         // combo r layer
         combo_N9 {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <6 7 8>;
+            key-positions = <0 1>;
             layers = <R_LAYER>;
             bindings = <&kp N9>;
         };
@@ -169,7 +169,7 @@
         };
         combo_N0 {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <0 1 2>;
+            key-positions = <1 2>;
             layers = <R_LAYER>;
             bindings = <&kp N0>;
         };
