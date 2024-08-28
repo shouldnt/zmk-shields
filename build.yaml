@@ -19,6 +19,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: k18keys_left
+    shield: klotus58glow_left
   - board: nice_nano_v2
-    shield: k18keys_right
+    shield: klotus58glow_right
