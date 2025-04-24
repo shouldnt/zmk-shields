@@ -1,0 +1,12 @@
+file_format: "1"
+id: neurophante
+name: neurophante
+type: shield
+url: https://github.com/shouldnt/CygnusKeyboard
+requires: [pro_micro]
+features:
+  - keys
+  - studio
+siblings:
+  - neurophante_left
+  - neurophante_right
