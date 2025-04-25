@@ -26,5 +26,5 @@ include:
     shield: neurophante_right
     artifact-name: neurophante_right
   - board: nice_nano_v2
-    shield: setting_reset
-    artifact-name: setting_reset
+    shield: settings_reset
+    artifact-name: settings_reset
