@@ -1,0 +1,15 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_KMOUSE
+
+config ZMK_KEYBOARD_NAME
+    default "kmouse"
+
+config ZMK_POINTING
+    default y
+
+config SPI
+    default y
+
+endif

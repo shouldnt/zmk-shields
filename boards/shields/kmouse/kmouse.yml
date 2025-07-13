@@ -1,0 +1,9 @@
+file_format: "1"
+id: kmouse
+name: kmouse
+type: shield
+url: https://github.com/shouldnt/zmk-shields/tree/k18keys
+requires: [pro_micro]
+features:
+  - keys
+  - pointing

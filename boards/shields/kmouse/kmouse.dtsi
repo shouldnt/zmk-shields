@@ -1,0 +1,32 @@
+/*
+ * Copyright (c) 2020 Pete Johanson
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    mouse_listener: mouse_listener {
+        compatible = "zmk,input-listener";
+    };
+
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,matrix_transform = &default_transform;
+    };
+
+    default_transform: keymap_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <18>;
+        rows = <1>;
+        map = <RC(0,0)>;
+    };
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-direct";
+
+        input-gpios = <&gpio0 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    };
+
+};
