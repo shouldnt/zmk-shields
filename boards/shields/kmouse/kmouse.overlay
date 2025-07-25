@@ -35,6 +35,7 @@
 
     mouse: mouse@0 {
         compatible = "pixart,pmw3610";
+        status="okay";
         spi-max-frequency = <4000000>;
         reg = <0x0>;
         /*cs-gpios = <&gpio0 22 GPIO_ACTIVE_LOW>;*/
